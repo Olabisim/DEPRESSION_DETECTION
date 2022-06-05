@@ -1,6 +1,20 @@
+import { useState } from 'react'
 import './css/login.css'
 
+
 export const Login = () => {
+
+        // FOR LOGIN
+        const [logusername, setLogusername] = useState<string>('')
+        const [logpassword, setLogpassword] = useState<string>('')
+
+        // FOR REGISTER
+        const [regusername, setRegusername] = useState<string>('')
+        const [regpassword, setRegpassword] = useState<string>('')
+        const [regemail, setRegemail] = useState<string>('')
+
+        console.log(logusername)
+
         return (
                 <div className="login-wrap">
                         <div className="login-html">
@@ -12,11 +26,11 @@ export const Login = () => {
                                         <div className="sign-in-htm">
                                                 <div className="group">
                                                         <label htmlFor="user" className="label">Username</label>
-                                                        <input id="user" type="text" className="input" />
+                                                        <input id="user" type="text" className="input" value={logusername} onChange={(e) => setLogusername(e.target.value)} />
                                                 </div>
                                                 <div className="group">
                                                         <label htmlFor="pass" className="label">Password</label>
-                                                        <input id="pass" type="password" className="input" data-type="password" />
+                                                        <input id="pass" type="password" className="input" data-type="password" value={logpassword} onChange={(e) => setLogpassword(e.target.value)} />
                                                 </div>
                                                 <div className="group">
                                                         <input id="check" type="checkbox" className="check" checked />
@@ -33,11 +47,11 @@ export const Login = () => {
                                         <div className="sign-up-htm">
                                                 <div className="group">
                                                         <label htmlFor="user" className="label">Username</label>
-                                                        <input id="user" type="text" className="input" />
+                                                        <input id="user" type="text" className="input" value={regusername} onChange={(e) => setRegusername(e.target.value)} />
                                                 </div>
                                                 <div className="group">
                                                         <label htmlFor="pass" className="label">Password</label>
-                                                        <input id="pass" type="password" className="input" data-type="password" />
+                                                        <input id="pass" type="password" className="input" data-type="password" value={regpassword} onChange={(e) => setRegpassword(e.target.value)}/>
                                                 </div>
                                                 <div className="group">
                                                         <label htmlFor="pass" className="label">Repeat Password</label>
@@ -45,7 +59,7 @@ export const Login = () => {
                                                 </div>
                                                 <div className="group">
                                                         <label htmlFor="pass" className="label">Email Address</label>
-                                                        <input id="pass" type="text" className="input" />
+                                                        <input id="pass" type="text" className="input" value={regemail} onChange={(e) => setRegemail(e.target.value)} />
                                                 </div>
                                                 <div className="group">
                                                         <input type="submit" className="button" value="Sign Up" />
