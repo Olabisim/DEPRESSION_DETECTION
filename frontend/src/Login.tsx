@@ -16,6 +16,7 @@ export const Login = () => {
         console.log(logusername)
 
         return (
+                <div className="login_main">       
                 <div className="login-wrap">
                         <div className="login-html">
                                 <input id="tab-1" type="radio" name="tab" className="sign-in" checked />
@@ -71,6 +72,7 @@ export const Login = () => {
                                         </div>
                                 </div>
                         </div>
+                </div>
                 </div>
         )
 }
