@@ -1,7 +1,8 @@
 
 
 import { useState } from 'react'
-
+import './css/button.css'
+import './css/qapage.css'
 
 
 interface questions {
@@ -16,27 +17,43 @@ interface quiztyppe  {
 
 const quiz:quiztyppe[] = [
         {
-                title: "main",
+                title: "1.	Persistent depressed (low) mood",
                 questions: [
-                        { question: "what are you doing", options: ["a", "b", "c"]},
-                        { question: "what are you doing", options: ["a", "b", "c"]},
-                        { question: "what are you doing", options: ["a", "b", "c"]},
+                        { question: "Do you feel down or sad regularly", options: ["Very often", "Often", "Never"]},
+                        { question: "Does it last longer than normal", options: ["Very long ", "Long ", "not Long"]},
+                        { question: "Can you shake it off", options: ["Yes  ", "Not sure ", "No"]},
                 ]
         },
         {
-                title: "main2",
+                title: "2.	Loss of interest in things you once enjoyed",
                 questions: [
-                        { question: "what are you doing", options: ["a", "b", "c"]},
-                        { question: "what are you doing", options: ["a", "b", "c"]},
-                        { question: "what are you doing", options: ["a", "b", "c"]},
+                        { question: "-	How often do you do things you love to do", options: ["Not at all", "Several Days", "Nearly Everyday"]},
+                        { question: "-	How strong is the drive to do what you enjoy", options: ["Very strong ", "strong ", "not strong"]},
+                        { question: "-	Do you see thing you do with pleasure before as pointless", options: ["no ", "not sure", "yes"]},
                 ]
         },
         {
-                title: "main3",
+                title: "3.	Feeling of worthlessness.",
                 questions: [
-                        { question: "what are you doing", options: ["a", "b", "c"]},
-                        { question: "what are you doing", options: ["a", "b", "c"]},
-                        { question: "what are you doing", options: ["a", "b", "c"]},
+                        { question: "-	Do you often feel you have let you self down.", options: ["Veryoften ", "often", "never"]},
+                        { question: "-	Do you temporarily feel fraustrated with your action or behaviour", options: ["Veryoften", "Often", "Never"]},
+                        { question: "-	Do you continuously feel unworthy or in adequate in multilple area of your life.", options: ["Veryoften", "not regulary ", "never"]},
+                ]
+        },
+        {
+                title: "4.	Poor concentration ",
+                questions: [
+                        { question: "-	-	Do you have trouble focusing or concentrating at work or school.  ", options: ["Veryoften ", "Not regularly", "never"]},
+                        { question: "-	-	Do you often have trouble completing simple task.", options: ["Veryoften", "not regularly ", "Never"]},
+                        { question: "-	Do you find it hard to manage most familiar or easy activities.", options: ["Yes ", "not sure", "no"]},
+                ]
+        },
+        {
+                title: "5.	Thought of harming yourself.",
+                questions: [
+                        { question: "--	Do you often get thought of not wanting to be alive", options: ["Veryoften ", "Not regularly", "never"]},
+                        { question: "--	Do you often get thought of harming yourself in anyway", options: ["Veryoften", "not regularly ", "Never"]},
+                        { question: "-	-	Would you love to change the life you living now", options: ["Yes ", "not sure", "no"]},
                 ]
         },
 ]
@@ -82,7 +99,7 @@ export const QApage = () => {
                                                                         mainIndex === 0 
                                                                         ?
                                                                         (
-                                                                                <div>
+                                                                                <div className="QApage_options">
                                                                                         {
                                                                                                 each.options.map(
                                                                                                         (each, subIndex) => (
@@ -94,22 +111,32 @@ export const QApage = () => {
                                                                                                                 subIndex === 0 
                                                                                                                 ? 
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal1(total1 + 1) } disabled>
-                                                                                                                                {each}
+                                                                                                                        // <button onClick={() => setTotal1(total1 + 1) } disabled>
+                                                                                                                        // <button onClick={() => setTotal1(total1 + 1) } >
+                                                                                                                        //         {each}
+                                                                                                                        // </button>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 1) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 :
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal1(total1 + 2) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 2) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal1(total1 + 3) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 3) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 }
@@ -126,7 +153,7 @@ export const QApage = () => {
                                                                         ?
                                                                         (
                                                                                 
-                                                                                <div>
+                                                                                <div className="QApage_options">
                                                                                         {
                                                                                                 each.options.map(
                                                                                                         (each, subIndex) => (
@@ -138,22 +165,28 @@ export const QApage = () => {
                                                                                                                 subIndex === 0 
                                                                                                                 ? 
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal2(total2 + 1) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 1) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 :
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal2(total2 + 2) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 2) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal2(total2 + 3) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 3) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 }
@@ -168,7 +201,7 @@ export const QApage = () => {
                                                                         : 
                                                                         (
                                                                                 
-                                                                                <div>
+                                                                                <div className="QApage_options">
                                                                                         {
                                                                                                 each.options.map(
                                                                                                         (each, subIndex) => (
@@ -180,22 +213,28 @@ export const QApage = () => {
                                                                                                                 subIndex === 0 
                                                                                                                 ? 
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal3(total3 + 1) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 1) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 :
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal3(total3 + 2) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 2) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button onClick={() => setTotal3(total3 + 3) }>
-                                                                                                                                {each}
+                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 3) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
                                                                                                                         </button>
                                                                                                                 )
                                                                                                                 }
