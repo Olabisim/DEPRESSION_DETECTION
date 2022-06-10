@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Login} from './Login'
-import {QApage} from './QApage'
+import {Home} from './Home'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
 
     <div>
 
-        <QApage />
+        <Home />
       
     </div>
 

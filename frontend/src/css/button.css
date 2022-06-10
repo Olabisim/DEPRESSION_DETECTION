@@ -49,6 +49,8 @@
         font-size: 1rem;
         font-weight: 900;
         mix-blend-mode: difference;
+        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
       }
       .btn-31:hover .text {
         animation: move-up-alternate 0.3s forwards;

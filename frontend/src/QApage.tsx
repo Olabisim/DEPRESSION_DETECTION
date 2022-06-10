@@ -17,15 +17,15 @@ interface quiztyppe  {
 
 const quiz:quiztyppe[] = [
         {
-                title: "1.	Persistent depressed (low) mood",
+                title: "Persistent depressed (low) mood",
                 questions: [
-                        { question: "Do you feel down or sad regularly", options: ["Very often", "Often", "Never"]},
-                        { question: "Does it last longer than normal", options: ["Very long ", "Long ", "not Long"]},
-                        { question: "Can you shake it off", options: ["Yes  ", "Not sure ", "No"]},
+                        { question: "-	Do you feel down or sad regularly", options: ["Very often", "Often", "Never"]},
+                        { question: "-	Does it last longer than normal", options: ["Very long ", "Long ", "not Long"]},
+                        { question: "-	Can you shake it off", options: ["Yes  ", "Not sure ", "No"]},
                 ]
         },
         {
-                title: "2.	Loss of interest in things you once enjoyed",
+                title: "Loss of interest in things you once enjoyed",
                 questions: [
                         { question: "-	How often do you do things you love to do", options: ["Not at all", "Several Days", "Nearly Everyday"]},
                         { question: "-	How strong is the drive to do what you enjoy", options: ["Very strong ", "strong ", "not strong"]},
@@ -33,7 +33,7 @@ const quiz:quiztyppe[] = [
                 ]
         },
         {
-                title: "3.	Feeling of worthlessness.",
+                title: "Feeling of worthlessness.",
                 questions: [
                         { question: "-	Do you often feel you have let you self down.", options: ["Veryoften ", "often", "never"]},
                         { question: "-	Do you temporarily feel fraustrated with your action or behaviour", options: ["Veryoften", "Often", "Never"]},
@@ -41,19 +41,19 @@ const quiz:quiztyppe[] = [
                 ]
         },
         {
-                title: "4.	Poor concentration ",
+                title: "Poor concentration ",
                 questions: [
-                        { question: "-	-	Do you have trouble focusing or concentrating at work or school.  ", options: ["Veryoften ", "Not regularly", "never"]},
-                        { question: "-	-	Do you often have trouble completing simple task.", options: ["Veryoften", "not regularly ", "Never"]},
+                        { question: "-	Do you have trouble focusing or concentrating at work or school.  ", options: ["Veryoften ", "Not regularly", "never"]},
+                        { question: "-	Do you often have trouble completing simple task.", options: ["Veryoften", "not regularly ", "Never"]},
                         { question: "-	Do you find it hard to manage most familiar or easy activities.", options: ["Yes ", "not sure", "no"]},
                 ]
         },
         {
-                title: "5.	Thought of harming yourself.",
+                title: "Thought of harming yourself.",
                 questions: [
-                        { question: "--	Do you often get thought of not wanting to be alive", options: ["Veryoften ", "Not regularly", "never"]},
-                        { question: "--	Do you often get thought of harming yourself in anyway", options: ["Veryoften", "not regularly ", "Never"]},
-                        { question: "-	-	Would you love to change the life you living now", options: ["Yes ", "not sure", "no"]},
+                        { question: "-	Do you often get thought of not wanting to be alive", options: ["Veryoften ", "Not regularly", "never"]},
+                        { question: "-	Do you often get thought of harming yourself in anyway", options: ["Veryoften", "not regularly ", "Never"]},
+                        { question: "-	Would you love to change the life you living now", options: ["Yes ", "not sure", "no"]},
                 ]
         },
 ]
@@ -74,11 +74,14 @@ export const QApage = () => {
 
         return (
                 <div>
+                        <div className='header_main'>
+
+                        </div>
                         <div>
                                 <div>
-                                        <h2>total1: {`${total1}`}</h2>
+                                        {/* <h2>total1: {`${total1}`}</h2>
                                         <h2>total2: {`${total2}`}</h2>
-                                        <h2>total3: {`${total3}`}</h2>
+                                        <h2>total3: {`${total3}`}</h2> */}
 
                                 </div>
 
@@ -90,11 +93,13 @@ export const QApage = () => {
 
                                 {quiz.map((each, mainIndex) => (
                                         <div>
-                                                {each.title}
+                                                <h1 className="QApage_h1">{each.title}</h1>
+
+                                                <div className="QApage_question_main">
                                                 {each.questions.map((each) => (
                                                         <>
                                                         
-                                                                <div>{each.question}</div>
+                                                                <div className="QApage_question">{each.question}</div>
                                                                 {
                                                                         mainIndex === 0 
                                                                         ?
@@ -105,7 +110,7 @@ export const QApage = () => {
                                                                                                         (each, subIndex) => (
                                                                                                                 
 
-                                                                                                        <div>
+                                                                                                        <div className="QApage_options_adjust">
                                                                                                                 
                                                                                                                 {
                                                                                                                 subIndex === 0 
@@ -159,7 +164,7 @@ export const QApage = () => {
                                                                                                         (each, subIndex) => (
                                                                                                                 
 
-                                                                                                        <div>
+                                                                                                        <div className="QApage_options_adjust">
                                                                                                                 
                                                                                                                 {
                                                                                                                 subIndex === 0 
@@ -207,7 +212,7 @@ export const QApage = () => {
                                                                                                         (each, subIndex) => (
                                                                                                                 
 
-                                                                                                        <div>
+                                                                                                        <div className="QApage_options_adjust">
                                                                                                                 
                                                                                                                 {
                                                                                                                 subIndex === 0 
@@ -250,6 +255,7 @@ export const QApage = () => {
                                                                 
                                                         </>
                                                 ))}
+                                                </div>
                                         </div>
                                 ))}
                         </div>

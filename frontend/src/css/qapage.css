@@ -1,5 +1,32 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .QApage_options {
         display: flex;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+}
+
+.QApage_options_adjust {
+        padding: 10px;
+}
+.QApage_question {
+        
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-size: 23px;
+}
+
+.header_main {
+        background: #1d2949;
+        height: 200px;
+        width: 100%;
+}
+.QApage_h1{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+}
+.QApage_question_main {
+        
 }
