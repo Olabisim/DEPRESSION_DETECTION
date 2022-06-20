@@ -1,5 +1,8 @@
 
+
+import { Link } from 'react-router-dom'
 import './css/home.css'
+import './css/button.css'
 
 
 export const Home = () => {
@@ -37,6 +40,43 @@ export const Home = () => {
                                 </div>
 
                         </div> */}
+                        <div className="home_text_div">
+                                <p>
+
+                                        Having a low mood or feeling on edge are common experiences for us all.
+                                        When these moods persist, it may be that you are experiencing depression 
+                                        or anxiety - or both. These self tests ask some important questions that
+                                        can help you take stock of where you are at so you can make a plan for 
+                                        feeling better sooner.
+
+                                </p>
+
+                                <p>
+                                        Whe you're going through a tough time it's normal to feel
+                                        down for a while, emotions like sadness and grief help make
+                                        us human. But if you're feeling sad or miserable most of the 
+                                        time over a long period of time, you might have depression.
+                                </p>
+
+                                <p>
+                                        Take this self test to help figure out whether you're showing any of the 
+                                        warning signs of depression. This won't give you a diagnosis but it will
+                                        help you decide the next step.
+                                </p>
+
+
+                        </div>
+                        <div className="home_main_second">
+                                <h2>WORRIED ABOUT HOW YOU FEEL</h2>
+                                <Link to="/test" >
+                                        <button className="btn-31">
+                                                <span className="text-container">
+                                                        <span className="text">TAKE A TEST</span>
+                                                </span>
+                                        </button>
+                                
+                                </Link>
+                        </div>
                 </div>
         )
 }

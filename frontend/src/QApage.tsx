@@ -65,6 +65,8 @@ export const QApage = () => {
         const [total1, setTotal1] = useState<number>(0)
         const [total2, setTotal2] = useState<number>(0)
         const [total3, setTotal3] = useState<number>(0)
+        const [total4, setTotal4] = useState<number>(0)
+        const [total5, setTotal5] = useState<number>(0)
 
 
         // to handle click once
@@ -79,9 +81,11 @@ export const QApage = () => {
                         </div>
                         <div>
                                 <div>
-                                        {/* <h2>total1: {`${total1}`}</h2>
+                                        <h2>total1: {`${total1}`}</h2>
                                         <h2>total2: {`${total2}`}</h2>
-                                        <h2>total3: {`${total3}`}</h2> */}
+                                        <h2>total3: {`${total3}`}</h2>
+                                        <h2>total4: {`${total4}`}</h2>
+                                        <h2>total5: {`${total5}`}</h2>
 
                                 </div>
 
@@ -204,6 +208,8 @@ export const QApage = () => {
                                                                                 </div>
                                                                         )
                                                                         : 
+                                                                        mainIndex === 2
+                                                                        ?
                                                                         (
                                                                                 
                                                                                 <div className="QApage_options">
@@ -251,6 +257,105 @@ export const QApage = () => {
                                                                                         }
                                                                                 </div>
                                                                         )
+                                                                        : 
+                                                                        mainIndex === 3
+                                                                        ?
+                                                                        (
+                                                                                
+                                                                                <div className="QApage_options">
+                                                                                        {
+                                                                                                each.options.map(
+                                                                                                        (each, subIndex) => (
+                                                                                                                
+
+                                                                                                        <div className="QApage_options_adjust">
+                                                                                                                
+                                                                                                                {
+                                                                                                                subIndex === 0 
+                                                                                                                ? 
+                                                                                                                (
+                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 1) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
+                                                                                                                        </button>
+                                                                                                                )
+                                                                                                                :
+                                                                                                                subIndex === 1 
+                                                                                                                ?
+                                                                                                                (
+                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 2) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
+                                                                                                                        </button>
+                                                                                                                )
+                                                                                                                :
+                                                                                                                (
+                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 3) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
+                                                                                                                        </button>
+                                                                                                                )
+                                                                                                                }
+
+                                                                                                        </div>
+
+                                                                                                        )
+                                                                                                )
+                                                                                        }
+                                                                                </div>
+                                                                        )
+                                                                        :
+                                                                        (
+                                                                                
+                                                                                <div className="QApage_options">
+                                                                                        {
+                                                                                                each.options.map(
+                                                                                                        (each, subIndex) => (
+                                                                                                                
+
+                                                                                                        <div className="QApage_options_adjust">
+                                                                                                                
+                                                                                                                {
+                                                                                                                subIndex === 0 
+                                                                                                                ? 
+                                                                                                                (
+                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 1) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
+                                                                                                                        </button>
+                                                                                                                )
+                                                                                                                :
+                                                                                                                subIndex === 1 
+                                                                                                                ?
+                                                                                                                (
+                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 2) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
+                                                                                                                        </button>
+                                                                                                                )
+                                                                                                                :
+                                                                                                                (
+                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 3) }>
+                                                                                                                                <span className="text-container">
+                                                                                                                                        <span className="text">{each}</span>
+                                                                                                                                </span>
+                                                                                                                        </button>
+                                                                                                                )
+                                                                                                                }
+
+                                                                                                        </div>
+
+                                                                                                        )
+                                                                                                )
+                                                                                        }
+                                                                                </div>
+                                                                        )
+
                                                                 }
                                                                 
                                                         </>
