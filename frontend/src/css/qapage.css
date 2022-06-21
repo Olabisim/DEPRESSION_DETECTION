@@ -27,6 +27,16 @@
         font-weight: 500;
         letter-spacing: 2px;
 }
-.QApage_question_main {
-        
+.QApage_submit_button_div {
+        margin-bottom: 30px;
+}
+.QApage_submit_button {
+        font-size: 22px;
+        padding: 20px 80px;
+        background: #1d2949;
+        color: white;
+        letter-spacing: 4px;
+        display: flex;
+        margin: auto;
+        font-weight: 100;
 }

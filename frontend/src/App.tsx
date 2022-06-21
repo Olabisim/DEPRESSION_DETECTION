@@ -4,6 +4,7 @@ import './App.css';
 import {Login} from './Login'
 import {Home} from './Home'
 import {QApage} from './QApage'
+import {TestChart} from './TestChart'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                                 <Route path='/login' element={ < Login /> } />
                                 <Route path='/' element={ < Home /> } />
                                 <Route path='/test' element={ < QApage /> } />
+                                <Route path='/chart' element={ < TestChart /> } />
                         </Routes>
 
                 </Router>

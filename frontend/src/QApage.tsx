@@ -21,7 +21,7 @@ const quiz:quiztyppe[] = [
                 questions: [
                         { question: "-	Do you feel down or sad regularly", options: ["Very often", "Often", "Never"]},
                         { question: "-	Does it last longer than normal", options: ["Very long ", "Long ", "not Long"]},
-                        { question: "-	Can you shake it off", options: ["Yes  ", "Not sure ", "No"]},
+                        { question: "-	Can you shake it off", options: ["No", "Not sure ", "Yes"]},
                 ]
         },
         {
@@ -124,7 +124,7 @@ export const QApage = () => {
                                                                                                                         // <button onClick={() => setTotal1(total1 + 1) } >
                                                                                                                         //         {each}
                                                                                                                         // </button>
-                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 1) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 6.7) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -134,7 +134,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 2) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 3.35) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -142,7 +142,7 @@ export const QApage = () => {
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 3) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal1(total1 + 0) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -174,7 +174,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 0 
                                                                                                                 ? 
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 1) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 6.7) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -184,7 +184,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 2) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 3.35) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -192,7 +192,7 @@ export const QApage = () => {
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 3) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal2(total2 + 0) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -224,7 +224,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 0 
                                                                                                                 ? 
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 1) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 6.7) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -234,7 +234,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 2) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 3.35) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -242,7 +242,7 @@ export const QApage = () => {
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 3) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal3(total3 + 0) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -274,7 +274,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 0 
                                                                                                                 ? 
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 1) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 6.7) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -284,7 +284,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 2) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 3.35) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -292,7 +292,7 @@ export const QApage = () => {
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 3) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal4(total4 + 0) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -322,7 +322,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 0 
                                                                                                                 ? 
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 1) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 6.7) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -332,7 +332,7 @@ export const QApage = () => {
                                                                                                                 subIndex === 1 
                                                                                                                 ?
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 2) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 3.35) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -340,7 +340,7 @@ export const QApage = () => {
                                                                                                                 )
                                                                                                                 :
                                                                                                                 (
-                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 3) }>
+                                                                                                                        <button className="btn-31" onClick={() => setTotal5(total5 + 0) }>
                                                                                                                                 <span className="text-container">
                                                                                                                                         <span className="text">{each}</span>
                                                                                                                                 </span>
@@ -363,6 +363,10 @@ export const QApage = () => {
                                                 </div>
                                         </div>
                                 ))}
+                        </div>
+
+                        <div className='QApage_submit_button_div'>
+                                <button className='QApage_submit_button'>SUBMIT</button>
                         </div>
                 </div>
         )
