@@ -79,7 +79,7 @@ export const QApage = () => {
                         <div className='header_main'>
 
                         </div>
-                        <div>
+                        {/* <div>
                                 <div>
                                         <h2>total1: {`${total1}`}</h2>
                                         <h2>total2: {`${total2}`}</h2>
@@ -89,7 +89,7 @@ export const QApage = () => {
 
                                 </div>
 
-                        </div>
+                        </div> */}
                         
                         <div>
 
@@ -363,6 +363,19 @@ export const QApage = () => {
                                                 </div>
                                         </div>
                                 ))}
+                        </div>
+
+                        
+                        <div>
+                                <div>
+                                        <h2>Persistent depressed (low) mood: {`${total1}`}</h2>
+                                        <h2>Loss of interest in things you once enjoyed: {`${total2}`}</h2>
+                                        <h2>Feeling of worthlessness: {`${total3}`}</h2>
+                                        <h2>Poor concentration: {`${total4}`}</h2>
+                                        <h2>Thought of harming yourself.: {`${total5}`}</h2>
+
+                                </div>
+
                         </div>
 
                         <div className='QApage_submit_button_div'>

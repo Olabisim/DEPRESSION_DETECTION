@@ -5,26 +5,18 @@ import { Pie, Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: ['Depressed', 'Not Depressed'],
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      data: [40, 60],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
       ],
       borderColor: [
         'rgba(255, 99, 132, 1)',
         'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
       ],
       borderWidth: 1,
     },
@@ -34,8 +26,14 @@ export const data = {
 export function TestChart() {
   return (
                 <>
-                <Pie data={data} />;
-                <Doughnut data={data} />;
+
+                <div className='adjust_pie_chart'>
+                  <Pie data={data} />
+
+                  <h2 className='adjust_pie_chart_heading'>This pie chart is indicating the percentage level of a depressed person.</h2>
+                  <h2 className='adjust_pie_chart_heading'>Moiet is 40% not depressed and 60% depressed as previewed in the chart above.</h2>
+                </div>
+                
                 </>
         )
 }

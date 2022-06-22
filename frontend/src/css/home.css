@@ -20,7 +20,9 @@ body {
     text-transform: uppercase;
     color: white;
     font-family: 'Anton', sans-serif;
-    /* font-family: 'Poller One', cursive; */
+    /* font-family: 'Poller One', cursive; */    
+    line-height: 1.5;
+    font-weight: 100;
 
 }
 .home_title,
@@ -260,6 +262,11 @@ a {
     text-align: center;
     margin: auto;
     font-size: 30px;
+}
+
+.home_text_div p {
+    line-height: 1.5;
+    font-weight: 100;
 }
 
 

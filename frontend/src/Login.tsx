@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './css/login.css'
+import { Link } from 'react-router-dom'
 
 
 export const Login = () => {
@@ -14,6 +15,7 @@ export const Login = () => {
         const [regemail, setRegemail] = useState<string>('')
 
         console.log(logusername)
+        console.log(logpassword)
 
         return (
                 <div className="login_main">       
@@ -33,16 +35,35 @@ export const Login = () => {
                                                         <label htmlFor="pass" className="label">Password</label>
                                                         <input id="pass" type="password" className="input" data-type="password" value={logpassword} onChange={(e) => setLogpassword(e.target.value)} />
                                                 </div>
+
                                                 <div className="group">
                                                         <input id="check" type="checkbox" className="check" checked />
                                                         <label htmlFor="check"><span className="icon"></span> Keep me Signed in</label>
                                                 </div>
+
                                                 <div className="group">
-                                                        <input type="submit" className="button" value="Sign In" />
+                                                        <Link to="/home">
+                                                        
+                                                                <input 
+                                                                        type="submit" 
+                                                                        className="button" 
+                                                                        value="Sign In" 
+                                                                        disabled={
+                                                                                logusername === '' 
+                                                                                        || 
+                                                                                logpassword === ''
+                                                                                        ?
+                                                                                        true 
+                                                                                        : 
+                                                                                        false
+                                                                        } 
+                                                                />
+
+                                                        </Link>
                                                 </div>
                                                 <div className="hr"></div>
                                                 <div className="foot-lnk">
-                                                        <a href="#forgot">Forgot Password?</a>
+                                                        <a href="#forgot" >Forgot Password?</a>
                                                 </div>
                                         </div>
                                         <div className="sign-up-htm">

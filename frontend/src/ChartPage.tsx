@@ -13,7 +13,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Bar,Doughnut } from 'react-chartjs-2';
+import { Bar,Doughnut, Pie } from 'react-chartjs-2';
 // import faker from 'faker';
 
 ChartJS.register(
@@ -38,51 +38,38 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
+const labels = ['Persistent depressed (low) mood', 'Loss of interest in things you once enjoyed', 'Feeling of worthlessness.', 'Poor concentration', 'Thought of harming yourself.', 'other'];
 
 
 export const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
+      label: 'Level',
       data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Dataset 2',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
+      backgroundColor: 'rgba(94, 42, 80, 0.5)',
+    }
   ],
 };
 
 
 export const data2 = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [
-          {
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)',
-            ],
-            borderWidth: 1,
-          },
-        ],
+  labels: ['Depressed', 'Not Depressed'],
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [40, 60],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+      ],
+      borderWidth: 1,
+    },
+  ],
       };
 
 export const ChartPage:React.FC = () => {
@@ -90,8 +77,14 @@ export const ChartPage:React.FC = () => {
         return (
                 <div>
 
-                        <Bar options={options} data={data} />;
-                        <Doughnut data={data2} />;
+{/* <div className='adjust_pie_chart'> */}
+                        <Bar options={options} data={data} />
+                          <div className='adjust_pie_chart'>
+                            <Pie data={data2} />
+
+                            <h2 className='adjust_pie_chart_heading'>This pie chart is indicating the percentage level of a depressed person.</h2>
+                            <h2 className='adjust_pie_chart_heading'>Moiet is 40% not depressed and 60% depressed as previewed in the chart above.</h2>
+                          </div>
 
                 </div>
         )
