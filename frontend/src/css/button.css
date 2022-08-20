@@ -51,6 +51,9 @@
         mix-blend-mode: difference;
         font-weight: 400;
         font-family: 'Raleway', sans-serif;
+        /*  */
+        
+    color: darkseagreen;
       }
       .btn-31:hover .text {
         animation: move-up-alternate 0.3s forwards;

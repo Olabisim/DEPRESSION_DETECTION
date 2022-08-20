@@ -47,7 +47,7 @@ export const data = {
     {
       label: 'Level',
       data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: 'rgba(94, 42, 80, 0.5)',
+      backgroundColor: '#1d2949',
     }
   ],
 };

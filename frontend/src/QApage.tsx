@@ -81,6 +81,7 @@ export const QApage = () => {
                         </div>
                         {/* <div>
                                 <div>
+
                                         <h2>total1: {`${total1}`}</h2>
                                         <h2>total2: {`${total2}`}</h2>
                                         <h2>total3: {`${total3}`}</h2>
@@ -90,13 +91,16 @@ export const QApage = () => {
                                 </div>
 
                         </div> */}
-                        
+
+                        <div className='body_main'>
+
+                                
                         <div>
 
 
 
                                 {quiz.map((each, mainIndex) => (
-                                        <div>
+                                        <div className='questions_main'>
                                                 <h1 className="QApage_h1">{each.title}</h1>
 
                                                 <div className="QApage_question_main">
@@ -367,7 +371,7 @@ export const QApage = () => {
 
                         
                         <div>
-                                <div>
+                                <div className="QApage_h2_main">
                                         <h2>Persistent depressed (low) mood: {`${total1}`}</h2>
                                         <h2>Loss of interest in things you once enjoyed: {`${total2}`}</h2>
                                         <h2>Feeling of worthlessness: {`${total3}`}</h2>
@@ -381,6 +385,10 @@ export const QApage = () => {
                         <div className='QApage_submit_button_div'>
                                 <button className='QApage_submit_button'>SUBMIT</button>
                         </div>
+
+                        
+                        </div>
+                        
                 </div>
         )
 }
