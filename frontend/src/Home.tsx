@@ -13,7 +13,7 @@ export const Home = () => {
 
                                         <div className="home_headerimgbx">
                                                 <div className="home_header-im">
-                                                        <img  className="home_headerimg" src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZXhhbXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+                                                        <img  className="home_headerimg" src="https://images.unsplash.com/photo-1556139930-c23fa4a4f934?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="bg_image" />
                                                         <div className='main_home_textbx'>
                                                                 
                                                                 <div className="home_textbx">
@@ -40,6 +40,8 @@ export const Home = () => {
                                 </div>
 
                         </div> */}
+                        <br />
+                        <br />
                         <div className="home_text_div">
                                 <p>
 
@@ -66,14 +68,18 @@ export const Home = () => {
 
 
                         </div>
+
+                        <br />
+                        <br />
+
                         <div className="home_main_second">
                                 <h2>WORRIED ABOUT HOW YOU FEEL</h2>
                                 <Link to="/test" >
-                                        <button className="btn-31">
-                                                <span className="text-container">
-                                                        <span className="text">TAKE A TEST</span>
-                                                </span>
-                                        </button>
+                                        <div className="ta-c">
+                                                <button className="button accept-btn" >
+                                                        Take a test
+                                                </button>
+                                        </div>
                                 
                                 </Link>
                         </div>
