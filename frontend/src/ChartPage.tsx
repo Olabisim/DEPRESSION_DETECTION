@@ -13,7 +13,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Bar,Doughnut, Pie } from 'react-chartjs-2';
+import { Bar, Pie } from 'react-chartjs-2';
+// import { Bar,Doughnut, Pie } from 'react-chartjs-2';
 import { QuestionDataContext } from './App';
 // import faker from 'faker';
 
