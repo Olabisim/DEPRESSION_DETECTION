@@ -1,7 +1,8 @@
 
 
-import { ReactElement, useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useContext, useState } from 'react'
+// import { ReactElement, useContext, useState } from 'react'
+// import { Link } from 'react-router-dom'
 import { QuestionDataContext } from './App'
 import { useNavigate } from 'react-router-dom';
 import './css/button.css'
@@ -13,7 +14,8 @@ interface questions {
         question: String,
         options:  {
                 value?: number,
-                title: string
+                title: string,
+                active?: boolean
         }[] 
 }
 
@@ -26,7 +28,7 @@ const quiz:quiztyppe[] = [
         {
                 title: "Persistent depressed (low) mood",
                 questions: [
-                        { question: "-	Do you feel down or sad regularly", options: [{value: 6.7, title: "Very often"}, {value: 3.35, title: "Often"}, {value: 0, title: "Never"}]},
+                        { question: "-	Do you feel down or sad regularly", options: [{value: 6.7, title: "Very often", active: false}, {value: 3.35, title: "Often",  active: false}, {value: 0, title: "Never",  active: false}]},
                         { question: "-	Does it last longer than normal", options:[{value: 6.7, title: "Very often"}, {value: 3.35, title: "Often"}, {value: 0, title: "Never"}]},
                         { question: "-	Can you shake it off", options:[{value: 6.7, title: "Very often"}, {value: 3.35, title: "Often"}, {value: 0, title: "Never"}]},
                 ]
@@ -69,16 +71,17 @@ const quiz:quiztyppe[] = [
 export const QApage = () => {
 
 
-        const [total1, setTotal1] = useState<number>(0)
-        const [total1a, setTotal1a] = useState<number>(0)
-        const [total1b, setTotal1b] = useState<number>(0)
-        const [total2, setTotal2] = useState<number>(0)
-        const [total3, setTotal3] = useState<number>(0)
-        const [total4, setTotal4] = useState<number>(0)
-        const [total5, setTotal5] = useState<number>(0)
+        // const [total1, setTotal1] = useState<number>(0)
+        // const [total1a, setTotal1a] = useState<number>(0)
+        // const [total1b, setTotal1b] = useState<number>(0)
+        // const [total2, setTotal2] = useState<number>(0)
+        // const [total3, setTotal3] = useState<number>(0)
+        // const [total4, setTotal4] = useState<number>(0)
+        // const [total5, setTotal5] = useState<number>(0)
 
 
         const [question1State, setquestion1State] = useState<any>(0)
+        // const [question1active, setquestion1active] = useState<any>(0)
         const [question1bState, setquestion1bState] = useState<any>(0)
         const [question1cState, setquestion1cState] = useState<any>(0)
 
@@ -136,18 +139,18 @@ export const QApage = () => {
         console.log(question1State)
 
 
-        const [activeTotal1, setActiveTotal1] = useState(false)
+        // const [activeTotal1, setActiveTotal1] = useState(false)
 
 
-        const handleClick = (val:number) => {
-                setTotal1(total1 + val);
-                setActiveTotal1(true)
-        }
+        // const handleClick = (val:number) => {
+        //         setTotal1(total1 + val);
+        //         setActiveTotal1(true)
+        // }
 
-        const handleQuestionState = (val:string) => {
+        // const handleQuestionState = (val:string) => {
                 // setquestion1State(val);
                 // setActiveTotal1(true)
-        }
+        // }
 
 
         return (
@@ -202,7 +205,7 @@ export const QApage = () => {
                                                                                                                         (
                                                                                                                                 <>
                                                                                                                                 {/* <button className={`button accept-btn ${  question1State === each.title &&  'accept-btn-active'}`} onClick={() => question1State(each.value) }> */}
-                                                                                                                                <button className={`button accept-btn`} onClick={() => setquestion1State(each.value) }>
+                                                                                                                                <button className={`button accept-btn ${  question1State === 6.7 &&  'accept-btn-active'}`} onClick={() => setquestion1State(each.value)}>
                                                                                                                                         {each.title}
                                                                                                                                 </button>
                                                                                                                                 </>
